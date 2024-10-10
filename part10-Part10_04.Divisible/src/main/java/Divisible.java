@@ -1,9 +1,17 @@
 
+import java.util.List;
+import java.util.stream.Stream;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class Divisible {
 
+    public static ArrayList<Integer> divisible(ArrayList<Integer> numbers) {
+        return numbers.stream()
+                .filter(x -> x % 2 == 0 || x % 3 == 0 || x % 5 == 0)
+                .collect(Collectors.toCollection(ArrayList::new));
+    }
+    
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(3);
@@ -18,8 +26,5 @@ public class Divisible {
                 .forEach(luku -> System.out.println(luku));
     }
 
-    public static ArrayList<Integer> divisible(ArrayList<Integer> numbers) {
-        return new ArrayList<>();
-    }
-
+    
 }
