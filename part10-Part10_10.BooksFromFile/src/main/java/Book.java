@@ -2,9 +2,9 @@
 public class Book {
 
     private String name;
+    private String author;
     private int publishingYear;
     private int pageCount;
-    private String author;
 
     public Book(String name, int ReleaseYear, int pages, String author) {
         this.name = name;
@@ -29,4 +29,12 @@ public class Book {
         return pageCount;
     }
 
+    @Override
+    public String toString(){
+        return "name: " + this.name + "\n" + 
+                "publishing year: " + this.publishingYear + "\n" + 
+                "pages: " + this.pageCount + "\n" + 
+                "author: " + this.author + "\n";
+    }
+    
 }
